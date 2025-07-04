@@ -50,6 +50,6 @@ For developers or advanced users who want to customize or self-host.
 ### 📦 Installation
 
 ```bash
-git clone https://github.com/LailaAutobot/ai-image-generator.git
+git clone https://github.com/LailaAutobot/DreamGen-ai-image.git
 cd ai-image-generator
 npm install
