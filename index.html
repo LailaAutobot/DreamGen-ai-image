@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.12.0"
+        }
+      }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🎨 AI Image Generator</h1>
+            <p>Use Gemini to bring your ideas to life</p>
+        </header>
+        <main>
+            <div id="image-container">
+                <img id="generated-image" alt="AI generated image">
+                <p id="image-placeholder">Your generated image will appear here</p>
+                <div id="loader" class="hidden"></div>
+            </div>
+
+            <div id="resolution-selector" aria-label="Select image aspect ratio">
+                <button class="resolution-btn active" data-aspect-ratio="1:1" aria-pressed="true">1:1</button>
+                <button class="resolution-btn" data-aspect-ratio="16:9" aria-pressed="false">16:9</button>
+                <button class="resolution-btn" data-aspect-ratio="9:16" aria-pressed="false">9:16</button>
+            </div>
+
+            <form id="generate-form" aria-labelledby="generate-label">
+                <input type="text" id="prompt-input" placeholder="A futuristic car flying over a neon city..." required>
+                <button type="submit">Generate</button>
+            </form>
+
+            <div id="error-container"></div>
+        </main>
+        <footer>
+            <p>&copy; 2023 Powered by Laila. All rights reserved.</p>
+        </footer>
+    </div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
